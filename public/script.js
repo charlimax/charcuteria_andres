@@ -457,7 +457,7 @@ document.head.appendChild(style);
     mensaje += `\n💰 *Total:* $${suma.toLocaleString()}`;
 
     // número de WhatsApp (reemplaza por tu número de pedidos en formato internacional sin +)
-    const whatsappNumber = "573105556789"; // <--- Cambia este número
+    const whatsappNumber = "573023178030"; // <--- Cambia este número
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
   });
