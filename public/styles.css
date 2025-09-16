@@ -865,3 +865,41 @@ a:hover {
   margin-top: 10px;
   color: #333;
 }
+
+/* Estilos base de inputs y selects */
+#pedidoForm input,
+#pedidoForm select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Agrupamos cada campo */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fila que puede contener 2 campos */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Por defecto en móvil: los dos ocupan ancho completo */
+.form-row .form-group {
+  flex: 1 1 100%;
+}
+
+/* En pantallas medianas/grandes: se ponen lado a lado */
+@media (min-width: 600px) {
+  .form-row .form-group {
+    flex: 1;
+  }
+}
+
