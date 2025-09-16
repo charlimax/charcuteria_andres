@@ -318,37 +318,48 @@
         <h2 id="modalPedidosTitle">Haz tu Pedido</h2>
 
         <form id="pedidoForm">
-          <label for="nombre">Tu nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
+  <div class="form-group">
+    <label for="nombre">Tu nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+  </div>
 
-          <label for="telefono">Teléfono de contacto:</label>
-          <input type="tel" id="telefono" name="telefono" required>
+  <div class="form-group">
+    <label for="telefono">Teléfono de contacto:</label>
+    <input type="tel" id="telefono" name="telefono" required>
+  </div>
 
-          <label for="direccion">Dirección de entrega:</label>
-          <input type="text" id="direccion" name="direccion" required>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="direccion">Dirección de entrega:</label>
+      <input type="text" id="direccion" name="direccion" required>
+    </div>
 
-          <label for="pago">Método de pago:</label>
-          <select id="pago" name="pago" required>
-            <option value="Efectivo">Efectivo</option>
-            <option value="Nequi">Nequi</option>
-            <option value="Transferencia Bancaria">Transferencia Bancaria</option>
-          </select>
+    <div class="form-group">
+      <label for="pago">Método de pago:</label>
+      <select id="pago" name="pago" required>
+        <option value="Efectivo">Efectivo</option>
+        <option value="Nequi">Nequi</option>
+        <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+      </select>
+    </div>
+  </div>
 
-          <hr>
+  <hr>
 
-          <div class="items-actions">
-            <button type="button" id="addItemBtn" class="small-btn">➕ Añadir producto</button>
-            <button type="button" id="addCustomBtn" class="small-btn">➕ Añadir personalizado</button>
-          </div>
+  <div class="items-actions">
+    <button type="button" id="addItemBtn" class="small-btn">➕ Añadir producto</button>
+    <button type="button" id="addCustomBtn" class="small-btn">➕ Añadir personalizado</button>
+  </div>
 
-          <div id="itemsContainer" class="items-container">
-            <!-- Aquí se insertan dinámicamente las filas de producto -->
-          </div>
+  <div id="itemsContainer" class="items-container">
+    <!-- Aquí se insertan dinámicamente las filas de producto -->
+  </div>
 
-          <p id="grandTotal">Total: $0</p>
+  <p id="grandTotal">Total: $0</p>
 
-          <button type="submit" class="primary-btn">Enviar a WhatsApp</button>
-        </form>
+  <button type="submit" class="primary-btn">Enviar a WhatsApp</button>
+</form>
+
 
         <!-- Templates (no visibles) -->
         <template id="selectItemTemplate">
