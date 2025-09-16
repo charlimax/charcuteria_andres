@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charcutería Gourmet - Productos Artesanales de Calidad</title>
+    <link rel="icon" type="image/x-icon" href="images/logochar.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Charcutería Gourmet</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#productos" class="nav-link">Productos</a></li>
+                    <li><a href="#comentarios" class="nav-link">Comentarios</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#" id="btnPedidos" class="nav-link">Pedidos</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section id="inicio" class="hero">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="images/Jamon.jpg" alt="Productos de charcutería premium">
+                    <div class="carousel-content">
+                        <h1>Productos Artesanales de Calidad Superior</h1>
+                        <p>Descubre nuestra selección de embutidos y quesos artesanales, elaborados con las mejores materias primas</p>
+                        <button class="cta-button">Ver Productos</button>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/Imagen2.jpg" alt="Embutidos artesanales">
+                    <div class="carousel-content">
+                        <h1>Embutidos Tradicionales</h1>
+                        <p>Elaborados siguiendo recetas tradicionales con ingredientes naturales y procesos artesanales</p>
+                        <button class="cta-button">Explorar</button>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/Quesos.png" alt="Quesos artesanales">
+                    <div class="carousel-content">
+                        <h1>Quesos Artesanales</h1>
+                        <p>Una selección exclusiva de quesos madurados con técnicas tradicionales para un sabor único</p>
+                        <button class="cta-button">Descubrir</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Gallery -->
+    <section id="productos" class="products">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <p class="section-subtitle">Descubre nuestra amplia gama de productos artesanales</p>
+            
+            <div class="products-grid">
+                <div class="product-card" onclick="openProductModal('embutidos')">
+                    <div class="product-image">
+                        <img src="images/Imagen1.jpg" alt="Embutidos Premium">
+                        <div class="product-overlay">
+                            <i class="fas fa-eye"></i>
+                            <span>Ver Detalles</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Embutidos Premium</h3>
+                        <p>Selección de embutidos artesanales elaborados con carnes de primera calidad</p>
+                        <span class="product-price">Desde $15.000</span>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('tabla-mixta')">
+                    <div class="product-image">
+                        <img src="images/Imagen2.jpg" alt="Tabla Mixta">
+                        <div class="product-overlay">
+                            <i class="fas fa-eye"></i>
+                            <span>Ver Detalles</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tabla Mixta Gourmet</h3>
+                        <p>Combinación perfecta de embutidos y quesos para compartir</p>
+                        <span class="product-price">$30.000</span>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('quesos')">
+                    <div class="product-image">
+                        <img src="images/Quesos.png" alt="Quesos Artesanales">
+                        <div class="product-overlay">
+                            <i class="fas fa-eye"></i>
+                            <span>Ver Detalles</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Quesos Artesanales</h3>
+                        <p>Variedad de quesos madurados con técnicas tradicionales</p>
+                        <span class="product-price">Desde $10.000</span>
+                    </div>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('especialidades')">
+                    <div class="product-image">
+                        <img src="images/Jamon.jpg" alt="Especialidades">
+                        <div class="product-overlay">
+                            <i class="fas fa-eye"></i>
+                            <span>Ver Detalles</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Especialidades de la Casa</h3>
+                        <p>Productos únicos elaborados con recetas exclusivas</p>
+                        <span class="product-price">Desde 50.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section id="comentarios" class="comments">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <div class="comments-grid">
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="comment-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="comment-info">
+                            <h4>María González</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Productos de calidad excepcional. Los embutidos tienen un sabor auténtico que me recuerda a los de mi pueblo. Totalmente recomendable."</p>
+                </div>
+
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="comment-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="comment-info">
+                            <h4>Carlos Ruiz</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"La tabla mixta es perfecta para las reuniones familiares. La variedad y calidad de los productos es impresionante. Servicio excelente."</p>
+                </div>
+
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <div class="comment-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="comment-info">
+                            <h4>Ana Martín</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Los quesos artesanales son una delicia. Se nota la dedicación y el cuidado en cada producto. Definitivamente volveré a comprar."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>Charcutería Gourmet</span>
+                    </div>
+                    <p>Productos artesanales de la más alta calidad, elaborados con pasión y tradición.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-x"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Diagonal 43 Sur # 22A - 39 Bogotá Colombia</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="https://wa.me/573023178030?text=Vengo%20de%20tu%20p%C3%A1gina"target="_blank"rel="noopener noreferrer">
+  				 WhatsApp: 3023178030
+			    </a>
+
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:megandresblanco@gmail.com?subject=Consulta&body=Hola,%20quisiera%20más%20información.">megandresblanco@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Horarios</h3>
+                    <div class="schedule">
+                        <div class="schedule-item">
+                            <span>Lunes - Viernes:</span>
+                            <span>9:00 - 20:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span>Sábados:</span>
+                            <span>9:00 - 14:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span>Domingos:</span>
+                            <span>Cerrado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-section">
+                <h3>Nuestra Ubicación</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0969045582287!2d-74.12796408987576!3d4.576613695378791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9f32c1ebeabb%3A0xb5f52846c95459e4!2sDg%2043%20Sur%20%2322a%2039%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1757943337176!5m2!1ses-419!2sco" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <button class="directions-btn" onclick="getDirections()">
+                        <i class="fas fa-directions"></i>
+                        Cómo llegar desde donde estés
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Charcutería Gourmet. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <div id="modalContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PEDIDOS (permite varios items y items personalizados) -->
+    <div id="modalPedidos" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-labelledby="modalPedidosTitle">
+        <button class="close" aria-label="Cerrar modal">&times;</button>
+        <h2 id="modalPedidosTitle">Haz tu Pedido</h2>
+
+        <form id="pedidoForm">
+          <label for="nombre">Tu nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="telefono">Teléfono de contacto:</label>
+          <input type="tel" id="telefono" name="telefono" required>
+
+          <label for="direccion">Dirección de entrega:</label>
+          <input type="text" id="direccion" name="direccion" required>
+
+          <label for="pago">Método de pago:</label>
+          <select id="pago" name="pago" required>
+            <option value="Efectivo">Efectivo</option>
+            <option value="Nequi">Nequi</option>
+            <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+          </select>
+
+          <hr>
+
+          <div class="items-actions">
+            <button type="button" id="addItemBtn" class="small-btn">➕ Añadir producto</button>
+            <button type="button" id="addCustomBtn" class="small-btn">➕ Añadir personalizado</button>
+          </div>
+
+          <div id="itemsContainer" class="items-container">
+            <!-- Aquí se insertan dinámicamente las filas de producto -->
+          </div>
+
+          <p id="grandTotal">Total: $0</p>
+
+          <button type="submit" class="primary-btn">Enviar a WhatsApp</button>
+        </form>
+
+        <!-- Templates (no visibles) -->
+        <template id="selectItemTemplate">
+          <div class="item-row">
+            <select class="item-product">
+              <option value="Embutidos Premium" data-precio="15000">Embutidos Premium - $15.000</option>
+              <option value="Tabla Mixta Gourmet" data-precio="30000">Tabla Mixta Gourmet - $30.000</option>
+              <option value="Quesos Artesanales" data-precio="10000">Quesos Artesanales - $10.000</option>
+              <option value="Especialidades de la Casa" data-precio="50000">Especialidades de la Casa - $50.000</option>
+            </select>
+
+            <input type="number" class="item-quantity" value="1" min="1" aria-label="Cantidad">
+            <input type="hidden" class="item-price-hidden" value="">
+            <span class="item-line-total"> $0</span>
+            <button type="button" class="remove-item" aria-label="Eliminar">Eliminar</button>
+          </div>
+        </template>
+
+        <template id="customItemTemplate">
+          <div class="item-row">
+            <input type="text" class="item-product-text" placeholder="Nombre del producto (personalizado)" required>
+            <input type="number" class="item-price-input" placeholder="Precio unitario" min="0" step="100" required>
+            <input type="number" class="item-quantity" value="1" min="1" aria-label="Cantidad">
+            <span class="item-line-total"> $0</span>
+            <button type="button" class="remove-item" aria-label="Eliminar">Eliminar</button>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

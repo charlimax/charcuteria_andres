@@ -1,0 +1,33 @@
+{
+  "name": "charcuteria-gourmet",
+  "version": "1.0.0",
+  "description": "Sitio web moderno para charcutería gourmet",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "charcuteria",
+    "gourmet",
+    "embutidos",
+    "quesos",
+    "artesanal",
+    "website",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Charcutería Gourmet",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-usuario/charcuteria-gourmet.git"
+  },
+  "homepage": "https://charcuteria-gourmet.vercel.app",
+  "devDependencies": {},
+  "dependencies": {}
+}
+
