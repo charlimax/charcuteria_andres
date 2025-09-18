@@ -222,7 +222,7 @@ window.addEventListener('click', function(event) {
 // Contact for order functionality
 function contactForOrder(productName) {
     const message = `Hola, estoy interesado en ${productName}. ¿Podrían proporcionarme más información sobre disponibilidad y precios?`;
-    const whatsappUrl = `https://wa.me/34912345678?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/573204949775?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }
 
@@ -232,18 +232,18 @@ function getDirections() {
         navigator.geolocation.getCurrentPosition(function(position) {
             const lat = position.coords.latitude;
             const lng = position.coords.longitude;
-            const destination = "Calle Gourmet 123, Madrid, España";
+            const destination = "Diagonal 43 Sur # 22A - 39 Bogotá, Colombia";
             const googleMapsUrl = `https://www.google.com/maps/dir/${lat},${lng}/${encodeURIComponent(destination)}`;
             window.open(googleMapsUrl, '_blank');
         }, function(error) {
             // If geolocation fails, open Google Maps with just the destination
-            const destination = "Calle Gourmet 123, Madrid, España";
+            const destination = "Diagonal 43 Sur # 22A - 39 Bogotá";
             const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(destination)}`;
             window.open(googleMapsUrl, '_blank');
         });
     } else {
         // If geolocation is not supported, open Google Maps with just the destination
-        const destination = "Calle Gourmet 123, Madrid, España";
+        const destination = "Diagonal 43 Sur # 22A - 39 Bogotá";
         const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(destination)}`;
         window.open(googleMapsUrl, '_blank');
     }
@@ -457,7 +457,7 @@ document.head.appendChild(style);
     mensaje += `\n💰 *Total:* $${suma.toLocaleString()}`;
 
     // número de WhatsApp (reemplaza por tu número de pedidos en formato internacional sin +)
-    const whatsappNumber = "573023178030"; // <--- Cambia este número
+    const whatsappNumber = "573204949775"; // <--- Cambia este número
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
   });
