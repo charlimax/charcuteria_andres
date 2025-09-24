@@ -222,7 +222,7 @@ window.addEventListener('click', function(event) {
 // Contact for order functionality
 function contactForOrder(productName) {
     const message = `Hola, estoy interesado en ${productName}. ¿Podrían proporcionarme más información sobre disponibilidad y precios?`;
-    const whatsappUrl = `https://wa.me/573204949775?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/573142564214?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }
 
